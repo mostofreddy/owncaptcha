@@ -84,14 +84,21 @@
                 <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
                     <form action="formvalidate.php" method="post">
                         <img src="valid.php" />
-                        <input type="text" name="code"/>
-                        <input type="submit" value="Send"/>
+                        <div class="input-group input-group-sm col-xs-5 pull-right">
+                          <input type="text" class="form-control" name="code">
+                          <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Send</button>
+                          </span>
+                        </div>
                     </form>
+
                 </div>
                 <button class="btn btn-info btn-sm"
                     data-toggle="modal" data-target="#codeLength">
                     <i class="fa fa-code "></i> view code</button>
             </div>
+
+
         </div>
 
         <footer>
