@@ -1,0 +1,29 @@
+{
+    "name": "mostofreddy/owncaptcha",
+    "description": "Easy Captpcha for PHP",
+    "version": "1.0.0",
+    "keywords": ["segurity", "captcha"],
+    "homepage": "https://github.com/mostofreddy/owncaptcha",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Lozada Mosto",
+            "email": "mostofreddy@gmail.com",
+            "homepage": "http://www.mostofreddy.com.ar",
+            "role": "Lead"
+        }
+    ],
+    "support": {
+        "email": "mostofreddy@gmail.com",
+        "issues": "https://github.com/mostofreddy/owncaptcha/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "owncaptcha\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

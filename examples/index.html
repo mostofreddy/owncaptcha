@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        OwnCaptcha - examples
+    </title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <style>
+    .container {
+        background-color:#fff;
+        height:100%;
+    }
+    .box {
+        height:170px;
+    }
+    </style>
+</head>
+<body>
+
+    <a href="https://github.com/mostofreddy/owncaptcha"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+    <div class="container" style="background-color:#efefef">
+        <h1>OwnCaptcha!</h1>
+        <p>Simple y fácil Captcha</p>
+        <p>
+            <a class="btn btn-primary btn-lg" role="button" href="https://github.com/mostofreddy/owncaptcha">
+                <i class="fa fa-github "></i> Ver código &raquo;
+            </a>
+        </p>
+    </div>
+
+    <div class="container">
+        <br/>
+        <h1>Examples</h1>
+        <div class="row">
+            <div class="col-md-4 col-xs-6 box">
+                <h2>Basic</h2>
+                <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
+                    <img src="basic.php" />
+                </div>
+                <button class="btn btn-info btn-sm"
+                    data-toggle="modal" data-target="#codeBasic">
+                    <i class="fa fa-code "></i> view code
+                </button>
+            </div>
+            <div class="col-md-4 col-xs-6 box">
+                <h2>Big</h2>
+                <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
+                    <img src="big.php" />
+                </div>
+                <button class="btn btn-info btn-sm"
+                    data-toggle="modal" data-target="#codeBig">
+                    <i class="fa fa-code "></i> view code</button>
+            </div>
+            <div class="col-md-4 col-xs-6 box">
+                <h2>Color</h2>
+                <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
+                    <img src="color.php" />
+                </div>
+                <button class="btn btn-info btn-sm"
+                    data-toggle="modal" data-target="#codeColor">
+                    <i class="fa fa-code "></i> view code</button>
+            </div>
+            <div class="col-md-4 col-xs-6 box">
+                <h2>Char length</h2>
+                <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
+                    <img src="length.php" />
+                </div>
+                <button class="btn btn-info btn-sm"
+                    data-toggle="modal" data-target="#codeLength">
+                    <i class="fa fa-code "></i> view code</button>
+            </div>
+
+            <div class="col-md-4 col-xs-6 box">
+                <h2>Validation</h2>
+                <div style="width:100%;text-align:center;padding:10px; border:1px solid #ccc">
+                    <form action="formvalidate.php" method="post">
+                        <img src="valid.php" />
+                        <input type="text" name="code"/>
+                        <input type="submit" value="Send"/>
+                    </form>
+                </div>
+                <button class="btn btn-info btn-sm"
+                    data-toggle="modal" data-target="#codeLength">
+                    <i class="fa fa-code "></i> view code</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+            <hr>
+            © Copyright 2014 - <a href="https://github.com/mostofreddy">Mostofreddy</a>
+            </p
+        </footer>
+    </div>
+
+
+
+<!-- Modal Basic-->
+<div class="modal fade" id="codeBasic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <pre>
+$adapter = new \owncaptcha\adapters\TextImage();
+$captcha = new \owncaptcha\Captcha();
+$captcha->adapter($adapter)
+    ->draw();
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Big-->
+<div class="modal fade" id="codeBig" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <pre>
+$adapter = new \owncaptcha\adapters\TextImage();
+$adapter->config(
+    array(
+        'fontsize' => '30',
+        'lineweight' => 1
+    )
+);
+$captcha = new \owncaptcha\Captcha();
+$captcha->ttl(60*5)
+    ->adapter($adapter)
+    ->draw();
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Color-->
+<div class="modal fade" id="codeColor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <pre>
+$adapter = new \owncaptcha\adapters\TextImage();
+$adapter->config(
+    array(
+        'bg' => array("r"=>0, "g"=>71, "b"=>171),
+        'forecolor' => array("r"=>255, "g"=>244, "b"=>0),
+        'linecolor' => array("r"=>255, "g"=>244, "b"=>0)
+    )
+);
+$captcha = new \owncaptcha\Captcha();
+$captcha->ttl(60*5)
+    ->adapter($adapter)
+    ->draw();
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal length-->
+<div class="modal fade" id="codeLength" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <pre>
+$adapter = new \owncaptcha\adapters\TextImage();
+$adapter->config(
+    array(
+        'charlen' => 15
+    )
+);
+$captcha = new \owncaptcha\Captcha();
+$captcha->ttl(60*5)
+    ->adapter($adapter)
+    ->draw();
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
