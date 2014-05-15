@@ -27,4 +27,4 @@ $adapter->config(
 );
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();

@@ -21,4 +21,4 @@ session_start();
 $adapter = new \owncaptcha\adapters\MathImage();
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();

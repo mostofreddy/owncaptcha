@@ -179,7 +179,7 @@
         <pre>
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter(new \owncaptcha\adapters\TextImage())
-    ->draw();
+    ->build();
 
         </pre>
       </div>
@@ -202,7 +202,7 @@ $adapter->config(
 );
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>
@@ -225,7 +225,7 @@ $adapter->config(
 );
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>
@@ -246,7 +246,7 @@ $adapter->config(
 );
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>
@@ -263,7 +263,7 @@ $adapter = new \owncaptcha\adapters\TextImage();
 $captcha = new \owncaptcha\Captcha();
 $captcha->ttl(60*5)
     ->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>
@@ -279,7 +279,7 @@ $captcha->ttl(60*5)
 $adapter = new \owncaptcha\adapters\MathImage();
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>
@@ -300,7 +300,7 @@ $adapter->config(
 );
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
-    ->draw();
+    ->build();
         </pre>
       </div>
     </div>

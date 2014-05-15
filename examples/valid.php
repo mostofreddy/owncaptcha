@@ -22,4 +22,4 @@ $adapter = new \owncaptcha\adapters\TextImage();
 $captcha = new \owncaptcha\Captcha();
 $captcha->ttl(60*5)
     ->adapter($adapter)
-    ->draw();
+    ->build();

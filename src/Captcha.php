@@ -97,7 +97,7 @@ class Captcha
      * @access public
      * @return string captcha generado
      */
-    public function draw()
+    public function build()
     {
         $_SESSION[$this->sessionVar] = '';
         //valida que el adapter este bien seteado

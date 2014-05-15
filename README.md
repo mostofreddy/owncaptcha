@@ -57,13 +57,18 @@ __0.2__
 * New examples
 * Unit testing
 * Change function name: setSessionVar to sessionVar
-
+* Change function name in \owncaptcha\Captcha class: draw to build
+ 
 __0.1__
 
 * Text image adapter
 * Session storage 
 * Captcha validation
 
+Examples
+========
+
+[View examples](https://github.com/mostofreddy/owncaptcha/tree/master/examples)
 
 Docs
 ====

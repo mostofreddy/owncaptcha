@@ -1,8 +1,8 @@
 {
     "name": "mostofreddy/owncaptcha",
-    "description": "Easy Captpcha for PHP",
+    "description": "Detects human/robots easily!",
     "version": "1.0.0",
-    "keywords": ["segurity", "captcha"],
+    "keywords": ["Captcha", "security", "captcha image", "mecaptcha", "spam", "bot"],
     "homepage": "https://github.com/mostofreddy/owncaptcha",
     "type": "library",
     "license": "MIT",

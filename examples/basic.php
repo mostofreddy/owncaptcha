@@ -20,4 +20,4 @@ session_start();
 
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter(new \owncaptcha\adapters\TextImage())
-    ->draw();
+    ->build();
