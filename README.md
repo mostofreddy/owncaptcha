@@ -11,11 +11,11 @@ __0.2.0__
 Features
 --------
 
-* Tiempo de vida de un captcha
-* Guarda en session el codigo del captcha para su posterior recuperación
-* Genera la imagen del captcha de forma automática
-* Sanado automatico de los valores de session y provenientes del formulario
-* Fácil de extender con nuevos Adapters para implementar distintos tipos de Captchas
+* Lifetime
+* Saves the captcha in session
+* Generates the captcha in png format
+* XSS clean
+* Extensible using adapters
 
 License
 -------
