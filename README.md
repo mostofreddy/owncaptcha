@@ -21,7 +21,8 @@ Features
 License
 -------
 
-[MIT License](http://www.opensource.org/licenses/mit-license.php)
+This content is released under the [MIT License](http://www.opensource.org/licenses/mit-license.php)
+
 
 Installation
 -----------
