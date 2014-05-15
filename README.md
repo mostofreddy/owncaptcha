@@ -16,6 +16,7 @@ Features
 * Generates the captcha in png format
 * XSS clean
 * Extensible using adapters
+* Apdaters: random text, math equation
 
 License
 -------
