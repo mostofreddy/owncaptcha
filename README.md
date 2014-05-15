@@ -51,15 +51,15 @@ Roadmap & issues
 Changelog
 ---------
 
-__0.2__
+__0.2.0__
 
 * Math image adapter
 * New examples
 * Unit testing
 * Change function name: setSessionVar to sessionVar
 * Change function name in \owncaptcha\Captcha class: draw to build
- 
-__0.1__
+
+__0.1.0__
 
 * Text image adapter
 * Session storage 
