@@ -7,9 +7,8 @@
  * Copyright (c) 2014 mostofreddy <mostofreddy@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category   Adapters
- * @package    OwnCaptcha
- * @subpackage Adapters
+ * @category   OwnCaptcha
+ * @package    OwnCaptcha\Adapters
  * @author     Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright  2014 Federico Lozada Mosto <mostofreddy@gmail.com>
  * @license    MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -20,9 +19,8 @@ namespace owncaptcha\adapters;
  * ICaptchaAdapter
  * Interfaz que debe implementar todo adapter
  *
- * @category   Adapters
- * @package    OwnCaptcha
- * @subpackage Adapters
+ * @category   OwnCaptcha
+ * @package    OwnCaptcha\Adapters
  * @author     Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright  2014 Federico Lozada Mosto <mostofreddy@gmail.com>
  * @license    MIT License (http://www.opensource.org/licenses/mit-license.php)

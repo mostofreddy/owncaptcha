@@ -7,9 +7,8 @@
  * Copyright (c) 2014 mostofreddy <mostofreddy@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category   Adapters
- * @package    OwnCaptcha
- * @subpackage Adapters
+ * @category   OwnCaptcha
+ * @package    OwnCaptcha\Adapters
  * @author     Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright  2014 Federico Lozada Mosto <mostofreddy@gmail.com>
  * @license    MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -19,9 +18,8 @@ namespace owncaptcha\adapters;
 /**
  * TextImage
  *
- * @category   Adapters
- * @package    OwnCaptcha
- * @subpackage Adapters
+ * @category   OwnCaptcha
+ * @package    OwnCaptcha\Adapters
  * @author     Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright  2014 Federico Lozada Mosto <mostofreddy@gmail.com>
  * @license    MIT License (http://www.opensource.org/licenses/mit-license.php)
@@ -139,7 +137,7 @@ class TextImage implements ICaptchaAdapter
         return true;
     }
     /**
-     * Imprime el capctha en pantalla y devuelve el texto que contiene
+     * Imprime el captcha en pantalla y devuelve el texto que contiene
      *
      * @access public
      * @return string
@@ -148,7 +146,7 @@ class TextImage implements ICaptchaAdapter
     {
         //valida las dependencias de GD
         $this->validateDeps();
-        //recupera el texto a mostrar en el captcha
+        //genera el texto para el captcha
         $txt = $this->txt();
         //setea el ancho según el largo del texto
         $this->setDinamicSize($txt);
@@ -158,8 +156,9 @@ class TextImage implements ICaptchaAdapter
         $this->setLines();
         //setea el texto
         $this->setText($txt);
-        //imprime en pantall
+        //imprime en pantalla
         $this->printImg();
+        //devuelve el contenido del captcha
         return $txt;
     }
 
@@ -174,10 +173,12 @@ class TextImage implements ICaptchaAdapter
     protected function setDinamicSize($txt)
     {
         if ($this->config['enablettf']) {
+            //esta habilitado el uso de fuentes ttf
             $cajaTexto = imagettfbbox($this->config['fontsize'], 0, $this->config['ttf'], $txt);
             $this->config['width'] = $cajaTexto[2] + (2 * $this->config['padding']);
             $this->config['height'] = $cajaTexto[3] + $this->config['fontsize'] + (2 * $this->config['padding']);
         } else {
+            //no tiene libs ttf por lo cual usa fuentes del sistema
             $fonty = imagefontheight(5);
             $fontx = imagefontwidth(5);
             $this->config['width'] = ($fontx * strlen($txt)) + (2 * $this->config['padding']);

@@ -1,6 +1,6 @@
 <?php
 /**
- * Ejemplo simple
+ * Ejemplo de una operacion aritmética
  *
  * PHP version 5.4
  *
@@ -18,12 +18,7 @@
 require_once realpath(__DIR__."/../vendor")."/autoload.php";
 session_start();
 
-$adapter = new \owncaptcha\adapters\TextImage();
-$adapter->config(
-    array(
-        'charlen' => 15
-    )
-);
+$adapter = new \owncaptcha\adapters\MathImage();
 $captcha = new \owncaptcha\Captcha();
 $captcha->adapter($adapter)
     ->draw();

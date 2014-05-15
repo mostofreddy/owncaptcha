@@ -21,7 +21,7 @@ session_start();
 $adapter = new \owncaptcha\adapters\TextImage();
 $adapter->config(
     array(
-        'charlen' => 15
+        'ttf' => realpath(dirname(__FILE__)."/../src/fonts").'/UnderwoodEtendu1913.ttf'
     )
 );
 $captcha = new \owncaptcha\Captcha();

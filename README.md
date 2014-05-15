@@ -1,23 +1,31 @@
 OwnCaptcha
 ==========
 
-Simple Captcha para PHP
+Detects human/robots easily!
 
-
-Versión
+Version
 -------
 
-- __1.0.0__
+__0.2.0__
 
-Licencia
+Features
+--------
+
+* Tiempo de vida de un captcha
+* Guarda en session el codigo del captcha para su posterior recuperación
+* Genera la imagen del captcha de forma automática
+* Sanado automatico de los valores de session y provenientes del formulario
+* Fácil de extender con nuevos Adapters para implementar distintos tipos de Captchas
+
+License
 -------
 
 [MIT License](http://www.opensource.org/licenses/mit-license.php)
 
-Instalación
+Installation
 -----------
 
-### Requerimientos
+### Requirements
 
 - PHP 5.3.*
 
@@ -43,18 +51,19 @@ Roadmap & issues
 Changelog
 ---------
 
-__1.0.0__
+__0.2__
 
-* Release
+* Math image adapter
+* New examples
+* Unit testing
+* Change function name: setSessionVar to sessionVar
 
-Features
-========
+__0.1__
 
-* Tiempo de vida de un captcha
-* Guarda en session el codigo del captcha para su posterior recuperación
-* Genera la imagen del captcha de forma automática
-* Sanado automatico de los valores de session y provenientes del formulario
-* Fácil de extender con nuevos Adapters para implementar distintos tipos de Captchas
+* Text image adapter
+* Session storage 
+* Captcha validation
+
 
 Docs
 ====
@@ -84,7 +93,7 @@ __Variable donde se almacena el valor del capcha en session__
 Con el método setSessionVar se puede cambiar la variable donde se almacena el captcha en session
 *Default: owncaptcha*
 
-    $captcha->setSessionVar('myvar');
+    $captcha->sessionVar('myvar');
 
 ### Validación
 
@@ -98,13 +107,9 @@ Apdaters
 
 Los adapters son distintas clases que implementan la lógica de como renderizar el captcha.
 
-Solo hay uno disponible.
-
 ### TextImage
 
-Este adapter crea una imagen con un texto aleatorio.
-
-#### Configuración
+Crea imagen con un texto aleatorio.
 
     $adapter = new \owncaptcha\adapters\TextImage();
     $adapter->config(
@@ -122,3 +127,9 @@ Este adapter crea una imagen con un texto aleatorio.
 * __fontsize__: (int) tamaño de la fuente ttf
 * __padding__: (int) padding de la imagen
 * __lineweight__: (int) grosor de las lineas de fondo
+
+### MathImage
+
+Crea imagen con una ecuación matemática.
+
+    $adapter = new \owncaptcha\adapters\MathImage();

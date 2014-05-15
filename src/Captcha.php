@@ -7,7 +7,7 @@
  * Copyright (c) 2014 mostofreddy <mostofreddy@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category  Captcha
+ * @category  OwnCaptcha
  * @package   OwnCaptcha
  * @author    Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright 2014 Federico Lozada Mosto <mostofreddy@gmail.com>
@@ -18,7 +18,7 @@ namespace owncaptcha;
 /**
  * Captcha
  *
- * @category  Captcha
+ * @category  OwnCaptcha
  * @package   OwnCaptcha
  * @author    Federico Lozada Mosto <mostofreddy@gmail.com>
  * @copyright 2014 Federico Lozada Mosto <mostofreddy@gmail.com>
@@ -34,6 +34,7 @@ class Captcha
     protected $ttl = 60;
     /**
      * Setea el tiempo de vida del captcha
+     * default: 60 seg
      *
      * @param int $ttl tiempo de vida del captcha en segundos
      *
@@ -46,7 +47,8 @@ class Captcha
         return $this;
     }
     /**
-     * Setea si habilita o no el guardado automatico del valor del captcha en session
+     * Habilita/deshabilita el guardado automatico del captcha en session
+     * default: true
      *
      * @param bool $save valores posibles true o false
      *
@@ -68,13 +70,14 @@ class Captcha
      * @access public
      * @return self
      */
-    public function setSessionVar($var)
+    public function sessionVar($var)
     {
         $this->sessionVar = $this->cleanAndSanitize((string) $var);
         return $this;
     }
     /**
      * Setea el adapter a utilizar para crear el captcha
+     * default: null
      *
      * @param \owncaptcha\adapters\ICaptchaAdapter $adapter Objeto adapter
      *
@@ -88,14 +91,15 @@ class Captcha
     }
 
     /**
-     * Imprime en pantalla el captcha en base al adapter seteado
+     * Imprime en pantalla el captcha (el formato depende del Adaptar seteado)
      *
-     * @throws Exception Si el adapter no es un objeto o no implementa la interfaz ICaptchaAdapter
+     * @throws \Exception Si el adapter no es un objeto o no implementa la interfaz ICaptchaAdapter
      * @access public
-     * @return string
+     * @return string captcha generado
      */
     public function draw()
     {
+        $_SESSION[$this->sessionVar] = '';
         //valida que el adapter este bien seteado
         if (!is_object($this->adapter)
             || (is_object($this->adapter) && !($this->adapter instanceof \owncaptcha\adapters\ICaptchaAdapter))
@@ -143,7 +147,10 @@ class Captcha
     protected function getSessionValue()
     {
         if (isset($_SESSION[$this->sessionVar])) {
-            return $this->cleanAndSanitize($_SESSION[$this->sessionVar]);
+            $aux = $this->cleanAndSanitize($_SESSION[$this->sessionVar]);
+            $_SESSION[$this->sessionVar] = null;
+            unset($_SESSION[$this->sessionVar]);
+            return $aux;
         } else {
             return '';
         }
