@@ -1,7 +1,7 @@
 {
     "name": "mostofreddy/owncaptcha",
     "description": "Detects human/robots easily!",
-    "version": "1.0.0",
+    "version": "0.2.0",
     "keywords": ["Captcha", "security", "captcha image", "mecaptcha", "spam", "bot"],
     "homepage": "https://github.com/mostofreddy/owncaptcha",
     "type": "library",
