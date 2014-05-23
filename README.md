@@ -4,6 +4,7 @@ OwnCaptcha
 Detects human/robots easily!
 
 [![Build Status](https://travis-ci.org/rocket-code/owncaptcha.svg?branch=master)](https://travis-ci.org/rocket-code/owncaptcha)
+[![Dependency Status](https://www.versioneye.com/user/projects/537fd8b314c15875700000b9/badge.svg)](https://www.versioneye.com/user/projects/537fd8b314c15875700000b9)
 
 Version
 -------
