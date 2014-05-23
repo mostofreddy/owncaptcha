@@ -17,4 +17,4 @@ before_script:
 
 # run phpcodesniffer
 script:
-    - phpcs --standard=tests/travisci-phpcs.xml --extensions=php .
+    - phpcs --standard=build/travis-ci-phpcs.xml --extensions=php .
