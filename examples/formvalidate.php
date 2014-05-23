@@ -4,15 +4,15 @@
  *
  * PHP version 5.4
  *
- * Copyright (c) 2014 mostofreddy <mostofreddy@gmail.com>
+ * Copyright (c) 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  *
- * @category   OwnCaptcha
- * @package    OwnCaptcha\Examples
- * @author     Federico Lozada Mosto <mostofreddy@gmail.com>
- * @copyright  2014 Federico Lozada Mosto <mostofreddy@gmail.com>
- * @license    MIT License (http://www.opensource.org/licenses/mit-license.php)
- * @link       http://www.mostofreddy.com.ar
+ * @category  OwnCaptcha
+ * @package   OwnCaptcha\Examples
+ * @author    Federico Lozada Mosto <mosto.federico@gmail.com>
+ * @copyright 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
+ * @license   MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * @link      http://www.mostofreddy.com.ar
  */
 
 require_once realpath(__DIR__."/../vendor")."/autoload.php";
@@ -94,7 +94,11 @@ try {
 </head>
 <body>
 
-        <a href="https://github.com/mostofreddy/owncaptcha"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+    <a href="https://github.com/mostofreddy/owncaptcha">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" 
+            src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" 
+            alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+    </a>
 
     <div class="container container-title">
         <h1>OwnCaptcha</h1>

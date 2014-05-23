@@ -6,7 +6,7 @@ Detects human/robots easily!
 Version
 -------
 
-__0.2.0__
+__0.2.1__
 
 Features
 --------
@@ -34,7 +34,7 @@ Installation
 ### Github
 
     cd /var/www
-    git clone git@github.com:mostofreddy/owncaptcha.git
+    git clone https://github.com/rocket-code/owncaptcha.git
     cd owncaptcha
     composer install
 
@@ -42,16 +42,22 @@ Installation
 
     "require": {
         "php": ">=5.3.0",
-        "mostofreddy/owncaptcha": "*",
+        "rocketcode/owncaptcha": "*",
     }
 
 Roadmap & issues
 ----------------
 
-[Roadmap & issues](https://github.com/mostofreddy/owncaptcha/issues)
+[Roadmap & issues](https://github.com/rocket-code/owncaptcha/issues)
 
 Changelog
 ---------
+
+__0.2.1__
+
+* Change repository url
+* Update composer.json
+* Update docblock
 
 __0.2.0__
 
@@ -70,7 +76,7 @@ __0.1.0__
 Examples
 ========
 
-[View examples](https://github.com/mostofreddy/owncaptcha/tree/master/examples)
+[View examples](https://github.com/rocket-code/owncaptcha/tree/master/examples)
 
 Docs
 ====

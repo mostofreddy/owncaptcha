@@ -1,9 +1,9 @@
 {
-    "name": "mostofreddy/owncaptcha",
+    "name": "rocketcode/owncaptcha",
     "description": "Detects human/robots easily!",
     "version": "0.2.0",
     "keywords": ["Captcha", "security", "captcha image", "mecaptcha", "spam", "bot"],
-    "homepage": "https://github.com/mostofreddy/owncaptcha",
+    "homepage": "https://github.com/rocket-code/owncaptcha",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
     ],
     "support": {
         "email": "mostofreddy@gmail.com",
-        "issues": "https://github.com/mostofreddy/owncaptcha/issues"
+        "issues": "https://github.com/rocket-code/owncaptcha/issues"
     },
     "autoload": {
         "psr-4": {
