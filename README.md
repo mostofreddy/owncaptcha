@@ -58,6 +58,7 @@ __0.2.1__
 * Change repository url
 * Update composer.json
 * Update docblock
+* Travis-CI integration
 
 __0.2.0__
 
