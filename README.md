@@ -9,7 +9,7 @@ Detects human/robots easily!
 Version
 -------
 
-__0.2.1__
+__0.2.1__ 
 
 Features
 --------
@@ -55,6 +55,10 @@ Roadmap & issues
 
 Changelog
 ---------
+
+__0.2.2__ (development)
+
+* Add unit testing
 
 __0.2.1__
 
