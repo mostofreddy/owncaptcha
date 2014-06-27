@@ -1,7 +1,7 @@
 <phpunit bootstrap="bootstrap.php" colors="true" processIsolation="true">
     <testsuites>
         <testsuite name="sesy">
-            <file>tests/src/CaptchaTest.php</file>
+            <file>src/CaptchaTest.php</file>
         </testsuite>
     </testsuites>
     <logging>

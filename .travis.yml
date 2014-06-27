@@ -17,4 +17,4 @@ before_script:
 # run phpcodesniffer
 script:
     - phpcs --standard=build/travis-ci-phpcs.xml --extensions=php --ignore=vendor,formvalidate.php .
-    - phpunit -c tests/phpunit.xml
+    - php vendor/phpunit/phpunit/phpunit -c tests/phpunit.xml
