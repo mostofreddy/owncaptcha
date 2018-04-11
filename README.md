@@ -1,3 +1,6 @@
+**DEPRECATED**
+
+
 OwnCaptcha
 ==========
 
@@ -9,7 +12,7 @@ Detects human/robots easily!
 Version
 -------
 
-__0.2.1__ 
+__0.2.1__
 
 Features
 --------
@@ -78,7 +81,7 @@ __0.2.0__
 __0.1.0__
 
 * Text image adapter
-* Session storage 
+* Session storage
 * Captcha validation
 
 Examples
